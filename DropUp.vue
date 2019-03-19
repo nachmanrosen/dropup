@@ -1,9 +1,8 @@
 <template>
     <div class="dropup">
-        <primary-button @click="clear()" class="dropbtn">
+        <button @click="clear()" class="dropbtn">
             {{ text }}
-            <img class="img" src="/images/small-arrow.svg" />
-        </primary-button>
+        </button>
         <div class="dropup-content">
             <div class="options" @click="clear">{{ buttonText }}</div>
             <div class="options" @click="select(option)" v-for="option in options">{{ option.name }}</div>
@@ -12,7 +11,6 @@
 </template>
 
 <script>
-import PrimaryButton from 'components/Buttons/PrimaryButton';
 export default {
     name: 'DropUp',
     props: ['options', 'buttonText'],
@@ -30,9 +28,6 @@ export default {
             this.text = this.buttonText;
             this.$emit('clear');
         },
-    },
-    components: {
-        PrimaryButton,
     },
 };
 </script>
