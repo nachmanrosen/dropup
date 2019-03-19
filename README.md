@@ -15,7 +15,7 @@ for example to create a dropup for selecting a specific user or clicking on All 
       //
     data() {
         return {
-            options: [{id:1,name:'Bob'},{id:2,name:Joe}],
+            options: [{id:1,name:'Bob'},{id:2,name:'Joe'}],
         };
     },
       
