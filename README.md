@@ -3,7 +3,8 @@ The component takes two props: options - the options to pass into your dropup, b
 onclick of button clears your selection.
 The component listens to two events, selected and clear
 
-for example to create a dropup for selecting All users or a specific user
+for example to create a dropup for selecting All users or a specific user  
+
       <drop-up
       :options="myUsers"
       buttonText="All Users"
