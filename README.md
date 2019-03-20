@@ -15,15 +15,16 @@ for example to create a dropup for selecting a specific user or clicking on All 
       //
     data() {
         return {
-            options: [{id:1,name:'Bob'},{id:2,name:'Joe'}],
+            myUsers: [{id:1,name:'Bob'},{id:2,name:'Joe'}],
+            selectedUser : {}
         };
     },
       
     methods: {
       selectUser(user) {
-            //code
+          this.selectedUser = user;  
         },
        clear() {
-            //code
+            this.selectedUser = {};
         },
-     },```
+     },
