@@ -2,7 +2,9 @@ A reusable Vue.js component for a dropup select menu.
 
 The new version 1.2  uses a DropUpContainer, set the options to be displayed by writing the myOptions data property. The name field is required, but price is optional
 There are two states, select: select only one option, multiSelect : select multiple options. For select set multiSelect data property to false, for multiSelect set multiSelect data property to true.
- <template>
+ 
+ 
+ ```<template>
     <div>
         <drop-up
                 :multiselect="multiSelect"
@@ -22,4 +24,4 @@ There are two states, select: select only one option, multiSelect : select multi
             },
             components: {DropUp}
         }
-    </script>
+    </script>```
