@@ -3,6 +3,7 @@
         <drop-up
                 :multiselect="multiSelect"
                 :options="myOptions"
+                @select = "select"
         ></drop-up>
     </div>
     </template>
@@ -13,7 +14,13 @@
             data(){
                 return{
                     myOptions:[{name:'apples', price:'$2.00'}],
-                    multiSelect="true"
+                    multiSelect: "true",
+                    selectedItems:[]
+                }
+            },
+            methods:{
+                select(selected){
+                    this.selectedItems = selected;
                 }
             },
             components: {DropUp}

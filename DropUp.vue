@@ -18,13 +18,14 @@
         data() {
             return {
                 text: '',
-                selected: '',
+                selected: [],
             };
         },
         methods: {
-            select(option) {
-                this.text = this.selected.map(o =>o.name);
-                this.multiSelect ? this.selected = item : this.selected.push(item);
+            select(item) {
+                this.text = this.selected.map(o =>o.name).toString();
+                this.multiSelect ? this.selected = [item] : this.selected.push(item);
+                this.$emit('select', this.selected);
             },
             clear() {
                 this.text = '';
