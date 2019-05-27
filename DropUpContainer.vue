@@ -1,7 +1,7 @@
 <template>
     <div>
         <drop-up
-                :multiselect="multiSelect"
+                :multiSelect="multiSelect"
                 :options="myOptions"
                 @select = "select"
         ></drop-up>
