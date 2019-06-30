@@ -5,8 +5,10 @@
         </div>
         <div class="dropup-content">
             <div class="options" @click="clear">Clear</div>
-            <div class="options" @click="select(option)" v-for="option in options">{{ option.name }}
-                <span v-if="option.price">{{option.price}}</span></div>
+            <div class="options" v-for="option in options"  @click="select(option)">
+                <span> {{ option.name }}</span>
+                <span v-if="option.price">{{option.price}}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -23,9 +25,10 @@
         },
         methods: {
             select(item) {
-                this.text = this.selected.map(o =>o.name).toString();
-                this.multiSelect ? this.selected = [item] : this.selected.push(item);
+                this.selected.push(item);
+                !this.multiSelect ?  this.selected.filter(item == item) :'';
                 this.$emit('select', this.selected);
+                this.text = this.selected.map(i =>i.name).toString();
             },
             clear() {
                 this.text = '';

@@ -13,7 +13,7 @@
             name: "DropUpContainer",
             data(){
                 return{
-                    myOptions:[{name:'apples', price:'$2.00'}],
+                    myOptions:[{name:'apples', price:'$2.00'},{name:'oranges', price :'$2.75'}],
                     multiSelect: "true",
                     selectedItems:[]
                 }
